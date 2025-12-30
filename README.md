@@ -13,6 +13,7 @@ O projeto foi feito como uma atividade de estudo e experimentação.
 ## ▶️ Como Executar o Projeto
 
 Antes de tudo, clone o repositório: https://github.com/PedroRobias/Resumidor-de-Texto-com-RAG
+Vale ressaltar que o modelo utilizado usa uma parcela pequena de RAM da máquina, além de 2,5GB de disco para instalação. 
 
 ```bash
 python -m venv venv               # Criar ambiente virtual
@@ -20,3 +21,5 @@ venv\Scripts\activate             # Ativar ambiente
 pip install -r requirements.txt   # Instala as dependências / bibliotecas
 ollama pull phi3                  # Instala o modelo pré-treinada do Ollama
 python main.py                    # Executa o main
+
+
