@@ -1,6 +1,12 @@
-def chunk_text(text, chunk_size=400, overlap=80):
-    words = text.split()
+def dividir_em_chunks(texto: str, tamanho: int = 400, sobreposicao: int = 50): #Divisão do texto em partes menores
+    palavras = texto.split() 
     chunks = []
-    for i in range(0, len(words), chunk_size - overlap):
-        chunks.append(" ".join(words[i:i+chunk_size]))
+
+    inicio = 0
+    while inicio < len(palavras):
+        fim = inicio + tamanho
+        chunk = " ".join(palavras[inicio:fim])
+        chunks.append(chunk)
+        inicio = fim - sobreposicao
+
     return chunks

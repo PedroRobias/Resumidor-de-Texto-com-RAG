@@ -1,3 +1,8 @@
-def load_text(path: str) -> str:
-    with open(path, "r", encoding="utf-8") as f:
+from pathlib import Path
+
+#Leitura do Arquivo em String
+
+def carregar_texto(caminho: str) -> str:
+    path = Path(caminho)
+    with path.open("r", encoding="utf-8") as f:
         return f.read()
