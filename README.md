@@ -17,9 +17,10 @@ Vale ressaltar que o modelo utilizado usa uma parcela pequena de RAM da máquina
 
 ```bash
 python -m venv venv               # Criar ambiente virtual
-venv\Scripts\activate             # Ativar ambiente
+.\venv\Scripts\Activate.ps1       # Ativar ambiente (Se bloqueado: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser)
 pip install -r requirements.txt   # Instala as dependências / bibliotecas
 ollama pull phi3                  # Instala o modelo pré-treinada do Ollama
 python main.py                    # Executa o main
+
 
 
